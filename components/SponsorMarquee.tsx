@@ -1,0 +1,63 @@
+"use client";
+
+import { useState } from "react";
+import sponsors from "@/data/sponsors.json";
+
+type Sponsor = (typeof sponsors)[number];
+
+const partners = sponsors.filter((s) => s.group === "partner");
+const media = sponsors.filter((s) => s.group === "media");
+
+/** One pit-lane banner row. Slows down on hover so a logo can be read. */
+function Row({ items, reverse = false, duration }: { items: Sponsor[]; reverse?: boolean; duration: number }) {
+  const [slow, setSlow] = useState(false);
+  // Repeat short lists so one copy is always wider than the viewport.
+  const set = items.length < 8 ? [...items, ...items] : items;
+
+  return (
+    <div
+      className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]"
+      onMouseEnter={() => setSlow(true)}
+      onMouseLeave={() => setSlow(false)}
+    >
+      <div
+        className={`marquee-track flex w-max items-center ${reverse ? "[animation-direction:reverse]" : ""}`}
+        style={{ ["--marquee-duration" as string]: `${slow ? duration * 3 : duration}s` }}
+      >
+        {[0, 1].map((k) => (
+          <ul key={k} className="flex shrink-0 items-center" aria-hidden={k === 1}>
+            {set.map((s, i) => (
+              <li key={`${s.logo}-${i}`} className="flex items-center">
+                <span className="flex h-16 items-center px-8 sm:px-12">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={s.logo}
+                    alt={k === 0 && i < items.length ? s.name : ""}
+                    loading="lazy"
+                    className="h-9 w-auto max-w-[180px] object-contain opacity-55 transition-[opacity,transform] duration-200 hover:scale-105 hover:opacity-100 sm:h-11"
+                  />
+                </span>
+                <span className="h-5 w-1.5 -skew-x-[20deg] bg-accent/60" aria-hidden />
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function SponsorMarquee() {
+  return (
+    <section aria-label="Our partners" className="relative border-y border-line bg-bg-2 py-10">
+      <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+        Trusted by Our Partners
+      </p>
+      <Row items={partners} duration={45} />
+      <p className="mb-4 mt-8 text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-muted/70">
+        Media &amp; Photography Partners
+      </p>
+      <Row items={media} reverse duration={35} />
+    </section>
+  );
+}

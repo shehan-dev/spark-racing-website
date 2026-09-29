@@ -1,0 +1,42 @@
+[
+  {
+    "tier": "Platinum", "tag": "Exclusive · 1 slot", "price": 600000, "featured": true,
+    "benefits": [
+      "Your company's name in the team — “[Your Brand] × Spark Racing”",
+      "Prominent logo on race suits, helmets, team uniforms & pit boards",
+      "Exclusive branding on press releases, team communications & social media",
+      "Mentions in interviews and media coverage",
+      "Hospitality & networking opportunities at the event"
+    ]
+  },
+  {
+    "tier": "Gold", "tag": "High visibility", "price": 450000,
+    "benefits": [
+      "Logo on race suits, helmets & team uniforms",
+      "Branding on team transport & promotional material",
+      "Featured mentions on social media & official announcements"
+    ]
+  },
+  {
+    "tier": "Silver", "tag": "On-track presence", "price": 300000,
+    "benefits": [
+      "Branding on helmets & team uniforms",
+      "Mentions in social media promotions",
+      "Inclusion in event-day team content"
+    ]
+  },
+  {
+    "tier": "Bronze", "tag": "Partner", "price": 150000,
+    "benefits": [
+      "Logo placement on selected team apparel",
+      "Mentions in social media coverage"
+    ]
+  },
+  {
+    "tier": "Support", "tag": "Back the team", "price": 75000,
+    "benefits": [
+      "Recognition as an official team supporter",
+      "Tailored benefits — talk to us"
+    ]
+  }
+]

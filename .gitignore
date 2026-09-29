@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+
+# Raw sponsor source files (processed logos live in public/sponsors)
+Sponsor Assets/
+
+.DS_Store
+__MACOSX/
+.env*

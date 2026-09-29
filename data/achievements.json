@@ -1,0 +1,28 @@
+[
+  {
+    "title": "2025 Endurance Champions",
+    "detail": "Overall champions of the 2025 Endurance Championship, winning every round.",
+    "value": 3, "suffix": "/3", "unit": "rounds won",
+    "featured": true
+  },
+  {
+    "title": "SWS Endurance Cup — Podium",
+    "detail": "1st runners-up in Round 1 of the SWS Endurance Cup 6h.",
+    "value": 2, "suffix": "nd", "unit": "place, 6-hour"
+  },
+  {
+    "title": "Asia Pacific Motorsport Championship",
+    "detail": "Represented Sri Lanka in 2025 and finished overall 3rd runners-up.",
+    "value": 13, "suffix": "", "unit": "teams on the grid"
+  },
+  {
+    "title": "Two Teams on the Grid",
+    "detail": "Our sister team took overall 1st runners-up in the 2025 Endurance Championship.",
+    "value": 2, "suffix": "", "unit": "teams fielded"
+  },
+  {
+    "title": "2024 Endurance Championship",
+    "detail": "Overall 1st runners-up in our debut season.",
+    "value": 2, "suffix": "nd", "unit": "overall, debut season"
+  }
+]

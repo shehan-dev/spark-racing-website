@@ -1,0 +1,16 @@
+{
+  "channels": [
+    { "name": "Pit Pass", "followers": 100000 },
+    { "name": "SpeedBay", "followers": 10000 },
+    { "name": "Ceylon Motor Sports Club", "followers": 10000, "note": "Sri Lanka's only FIA-affiliated club" }
+  ],
+  "press": ["Papare.com", "Daily FT", "LMD", "Daily Mirror", "Sunday Times", "Sunday Observer", "Ada Derana", "BizEnglish"],
+  "videos": [
+    { "id": "Epd1fDeFXaY", "title": "SpeedBay 6-Hour Endurance Championship 2025 — Round 2", "url": "https://www.youtube.com/live/Epd1fDeFXaY" },
+    { "id": "8FRO0wq3XGQ", "title": "SpeedBay Endurance Championship 2024 — 12 Hours", "url": "https://www.youtube.com/watch?v=8FRO0wq3XGQ&t=28s" }
+  ],
+  "budget": [
+    { "label": "Race fees & travel", "detail": "Entry fees for the races & logistics", "amount": 1250000 },
+    { "label": "Promotion & marketing", "detail": "Team branding, event presence, pro photo & video", "amount": 150000 }
+  ]
+}
