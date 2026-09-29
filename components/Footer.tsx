@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
+import SponsorLogo, { byTier } from "./SponsorLogo";
 
 export default function Footer() {
   const socials = [
@@ -10,6 +11,18 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-line bg-black">
       <div className="race-stripe" aria-hidden />
+      <div className="border-b border-line">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-accent">Main Sponsors</p>
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {byTier("main").map((s) => (
+              <li key={s.name} className="text-white/70 transition-colors hover:text-white">
+                <SponsorLogo sponsor={s} imgClass="h-8 sm:h-10" textClass="text-lg" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div>
           <div className="relative h-14 w-40">

@@ -12,7 +12,7 @@ const checklist = [
   { label: "Driver line-up", status: "Under wraps" },
 ];
 
-/** Tachometer whose needle keeps blipping the throttle. */
+/** Static tachometer, needle held just short of the redline. */
 function Tacho() {
   const ticks = Array.from({ length: 11 }, (_, i) => i);
   // Arc from -120deg to +120deg
@@ -35,14 +35,9 @@ function Tacho() {
         );
       })}
       <path d="M 32.4 139 A 78 78 0 1 1 167.6 139" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
-      <motion.g
-        style={{ originX: "100px", originY: "100px" }}
-        initial={{ rotate: -120 }}
-        animate={{ rotate: [-120, 40, -30, 95, 10, 70, -120] }}
-        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", times: [0, 0.15, 0.3, 0.45, 0.6, 0.8, 1] }}
-      >
+      <g transform="rotate(60 100 100)">
         <line x1="100" y1="100" x2="100" y2="34" stroke="#ff6a00" strokeWidth="3" strokeLinecap="round" />
-      </motion.g>
+      </g>
       <circle cx="100" cy="100" r="7" fill="#ff6a00" />
       <text x="100" y="128" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="9" letterSpacing="2">
         RPM × 1000

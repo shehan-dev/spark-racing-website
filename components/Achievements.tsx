@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import achievements from "@/data/achievements.json";
 import Counter from "./Counter";
 import SectionHeading from "./SectionHeading";
-import { popIn, stagger, viewport } from "@/lib/motion";
+import { ease, popIn, stagger, viewport } from "@/lib/motion";
 
 function Trophy({ className = "" }: { className?: string }) {
   return (
@@ -60,21 +60,67 @@ export default function Achievements() {
                 </>
               )}
               <div className="absolute -right-10 -top-10 h-32 w-32 rotate-45 bg-accent/5 transition-transform duration-500 ease-race group-hover:translate-x-4" aria-hidden />
-              <Trophy className={`relative ${a.featured ? "h-12 w-12" : "h-8 w-8"} text-accent`} />
-              <p className={`font-display relative mt-6 ${a.featured ? "text-8xl sm:text-9xl" : "text-5xl"} text-ink`}>
-                <Counter to={a.value} suffix={a.suffix} duration={a.featured ? 1.2 : 1.6} />
-              </p>
-              <p className="relative mt-2 text-xs font-semibold uppercase tracking-widest text-accent">{a.unit}</p>
-              <h3 className={`relative mt-6 font-bold ${a.featured ? "text-2xl" : "text-lg"}`}>{a.title}</h3>
-              <p className="relative mt-2 leading-relaxed text-muted">{a.detail}</p>
-              {a.featured && (
-                <p className="font-display relative mt-10 inline-block -skew-x-12 bg-accent px-3 py-1 text-sm text-black">
-                  Champions 2025
-                </p>
+              {a.featured ? (
+                <div className="relative flex h-full flex-col">
+                  <Trophy className="h-14 w-14 text-accent" />
+                  <p className="font-display mt-8 text-7xl text-ink sm:text-8xl">2025</p>
+                  <p className="font-display text-glow mt-1 text-5xl italic text-accent sm:text-6xl">Champs</p>
+                  <h3 className="mt-8 text-2xl font-bold">{a.title}</h3>
+                  <p className="mt-2 leading-relaxed text-ink/80">{a.detail}</p>
+                  <p className="font-display mt-auto inline-block self-start -skew-x-12 bg-accent px-3 py-1 pt-1 text-sm text-black lg:mt-10">
+                    Overall Champions
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <Trophy className="relative h-8 w-8 text-accent" />
+                  <p className="font-display relative mt-6 text-5xl text-ink">
+                    <Counter to={a.value ?? 0} suffix={a.suffix ?? ""} />
+                  </p>
+                  <p className="relative mt-2 text-xs font-semibold uppercase tracking-widest text-accent">{a.unit}</p>
+                  <h3 className="relative mt-6 text-lg font-bold">{a.title}</h3>
+                  <p className="relative mt-2 leading-relaxed text-muted">{a.detail}</p>
+                </>
               )}
             </motion.li>
           ))}
         </motion.ul>
+
+        {/* Trophy cabinet */}
+        <motion.figure
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewport}
+          transition={{ duration: 0.6, ease }}
+          className="mt-4 grid overflow-hidden border border-line bg-surface lg:grid-cols-[1.6fr_1fr]"
+        >
+          <div className="group relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/trophies.jpg"
+              alt="Spark Racing's trophies, medals and race helmets from the 2024 and 2025 endurance seasons"
+              fill
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              className="object-cover transition-transform duration-700 ease-race group-hover:scale-105"
+            />
+          </div>
+          <figcaption className="relative flex flex-col justify-center p-8 sm:p-10">
+            <span className="absolute left-0 top-0 h-1 w-1/3 bg-accent lg:h-1/3 lg:w-1" aria-hidden />
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">The trophy cabinet</p>
+            <h3 className="font-display mt-4 text-4xl italic sm:text-5xl">
+              Two seasons. <span className="text-accent">One full table.</span>
+            </h3>
+            <p className="mt-5 leading-relaxed text-muted">
+              Championship titles, SWS awards and podium medals, earned across the 2024 and 2025 endurance seasons.
+              Every piece of silverware here carried our partners&apos; logos to the podium.
+            </p>
+            <a
+              href="#contact"
+              className="btn-throttle mt-8 inline-block self-start -skew-x-12 bg-accent px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-black"
+            >
+              <span className="inline-block skew-x-12">Be on the next podium</span>
+            </a>
+          </figcaption>
+        </motion.figure>
       </div>
     </section>
   );
