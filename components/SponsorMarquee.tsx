@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import sponsors from "@/data/sponsors.json";
-
-type Sponsor = (typeof sponsors)[number];
-
-const partners = sponsors.filter((s) => s.group === "partner");
-const media = sponsors.filter((s) => s.group === "media");
+import SponsorLogo, { byTier, type Sponsor } from "./SponsorLogo";
 
 /** One pit-lane banner row. Slows down on hover so a logo can be read. */
 function Row({ items, reverse = false, duration }: { items: Sponsor[]; reverse?: boolean; duration: number }) {
@@ -27,14 +22,13 @@ function Row({ items, reverse = false, duration }: { items: Sponsor[]; reverse?:
         {[0, 1].map((k) => (
           <ul key={k} className="flex shrink-0 items-center" aria-hidden={k === 1}>
             {set.map((s, i) => (
-              <li key={`${s.logo}-${i}`} className="flex items-center">
-                <span className="flex h-16 items-center px-8 sm:px-12">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={s.logo}
-                    alt={k === 0 && i < items.length ? s.name : ""}
-                    loading="lazy"
-                    className="h-9 w-auto max-w-[180px] object-contain opacity-55 transition-[opacity,transform] duration-200 hover:scale-105 hover:opacity-100 sm:h-11"
+              <li key={`${s.name}-${i}`} className="flex items-center">
+                <span className="flex h-16 items-center px-8 text-white/55 opacity-80 transition-[color,opacity,transform] duration-200 hover:scale-105 hover:text-white hover:opacity-100 sm:px-12">
+                  <SponsorLogo
+                    sponsor={s}
+                    decorative={k === 1 || i >= items.length}
+                    imgClass="h-9 max-w-[180px] sm:h-11"
+                    textClass="text-xl sm:text-2xl"
                   />
                 </span>
                 <span className="h-5 w-1.5 -skew-x-[20deg] bg-accent/60" aria-hidden />
@@ -49,15 +43,13 @@ function Row({ items, reverse = false, duration }: { items: Sponsor[]; reverse?:
 
 export default function SponsorMarquee() {
   return (
-    <section aria-label="Our partners" className="relative border-y border-line bg-bg-2 py-10">
-      <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">
-        Trusted by Our Partners
+    <section aria-label="Sponsors and media partners" className="relative border-y border-line bg-bg-2 py-10">
+      <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">Our Sponsors</p>
+      <Row items={byTier("sponsor")} duration={45} />
+      <p className="mb-4 mt-8 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+        Media Partners
       </p>
-      <Row items={partners} duration={45} />
-      <p className="mb-4 mt-8 text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-muted/70">
-        Media &amp; Photography Partners
-      </p>
-      <Row items={media} reverse duration={35} />
+      <Row items={byTier("media")} reverse duration={38} />
     </section>
   );
 }
