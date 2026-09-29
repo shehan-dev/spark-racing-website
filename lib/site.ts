@@ -2,8 +2,6 @@ export const site = {
   name: "Spark Racing",
   tagline: "Endurance Karting Team",
   email: "shehansilva2013@gmail.com",
-  // Proposal-form enquiries are delivered to the first address and CC'd to the rest (via formsubmit.co).
-  enquiryRecipients: ["shehansilva2013@gmail.com", "thanu.dee92@gmail.com"],
   social: {
     handle: "@spark.racing.sl",
     instagram: "https://www.instagram.com/spark.racing.sl/",
