@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="race-stripe" aria-hidden />
       <div className="border-b border-line">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-accent">Main Sponsors</p>
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-accent">Main Sponsors · Previous Rounds</p>
           <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {byTier("main").map((s) => (
               <li key={s.name} className="text-white/70 transition-colors hover:text-white">

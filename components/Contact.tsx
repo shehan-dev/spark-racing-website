@@ -68,6 +68,20 @@ export default function Contact() {
         </div>
 
         <motion.div variants={stagger(0.12)} initial="hidden" whileInView="show" viewport={viewport}>
+          <motion.a
+            variants={fadeUp}
+            href={`mailto:${site.email}?subject=${subject}`}
+            className="group relative mb-8 flex items-center justify-between gap-4 overflow-hidden border border-accent bg-accent/10 p-6 transition-colors duration-200 hover:bg-accent hover:text-black sm:p-8"
+          >
+            <div className="min-w-0">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-accent group-hover:text-black">Team inbox</p>
+              <p className="font-display mt-2 truncate text-xl italic sm:text-xl">{site.email}</p>
+            </div>
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center bg-accent text-black group-hover:bg-black group-hover:text-accent">
+              <MailIcon />
+            </span>
+          </motion.a>
+
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-muted">Sponsorship team</p>
           <ul className="space-y-4">
             {team.map((m) => (

@@ -1,27 +1,127 @@
 [
-  { "name": "Redline Capital", "tier": "main", "logo": "/sponsors/redline-capital.png" },
-  { "name": "Tergo Autocare", "tier": "main", "logo": null },
-  { "name": "Access Motors", "tier": "main", "logo": "/sponsors/access-motors.png" },
-  { "name": "Bodyshop by Access", "tier": "main", "logo": "/sponsors/bodyshop-by-access.png" },
-  { "name": "Technomedics", "tier": "main", "logo": "/sponsors/technomedics.png" },
-  { "name": "Random Software", "tier": "main", "logo": "/sponsors/random-software.png" },
-  { "name": "Mega Solar", "tier": "main", "logo": null },
-
-  { "name": "Decent Car Sales", "tier": "sponsor", "logo": null },
-  { "name": "TapHouse", "tier": "sponsor", "logo": null },
-  { "name": "Alco Rub", "tier": "sponsor", "logo": null },
-  { "name": "Orzone Mineral Water", "tier": "sponsor", "logo": null },
-  { "name": "GearupLK", "tier": "sponsor", "logo": "/sponsors/gearup.png" },
-  { "name": "Avier Travels", "tier": "sponsor", "logo": "/sponsors/avier-travels.png" },
-  { "name": "Chanila Tea", "tier": "sponsor", "logo": null },
-  { "name": "IIT", "tier": "sponsor", "logo": null },
-  { "name": "Premium Oil Store", "tier": "sponsor", "logo": "/sponsors/premium-oil-store.png" },
-
-  { "name": "Stanced.Co", "tier": "media", "logo": "/sponsors/stanced.png" },
-  { "name": "Lashen's Work", "tier": "media", "logo": "/sponsors/lashens-work.png" },
-  { "name": "Sri Lankan Car Culture", "tier": "media", "logo": "/sponsors/sri-lankan-car-culture.png" },
-  { "name": "Lochana W.", "tier": "media", "logo": "/sponsors/lochana-w.png" },
-  { "name": "Th7Rock", "tier": "media", "logo": "/sponsors/the-rock.png" },
-  { "name": "Munokrome", "tier": "media", "logo": "/sponsors/munokrome.png" },
-  { "name": "Ray J", "tier": "media", "logo": "/sponsors/ray-jr-international.png" }
+  {
+    "name": "Redline Capital",
+    "tier": "main",
+    "logo": "/sponsors/redline-capital.png"
+  },
+  {
+    "name": "Tergo Autocare",
+    "tier": "main",
+    "logo": "/sponsors/tergo-autocare.png"
+  },
+  {
+    "name": "Access Motors",
+    "tier": "main",
+    "logo": "/sponsors/access-motors.png"
+  },
+  {
+    "name": "Bodyshop by Access",
+    "tier": "main",
+    "logo": "/sponsors/bodyshop-by-access.png"
+  },
+  {
+    "name": "Technomedics",
+    "tier": "main",
+    "logo": "/sponsors/technomedics.png"
+  },
+  {
+    "name": "Random Software",
+    "tier": "main",
+    "logo": "/sponsors/random-software.png"
+  },
+  {
+    "name": "Mega Solar",
+    "tier": "main",
+    "logo": "/sponsors/mega-solar.png"
+  },
+  {
+    "name": "Decent Car Sales",
+    "tier": "previous",
+    "logo": "/sponsors/decent-car-sales.png"
+  },
+  {
+    "name": "TapHouse",
+    "tier": "previous",
+    "logo": "/sponsors/taphouse.png"
+  },
+  {
+    "name": "Alco Rub",
+    "tier": "previous",
+    "logo": "/sponsors/alco-rub.png"
+  },
+  {
+    "name": "Orzone Mineral Water",
+    "tier": "previous",
+    "logo": "/sponsors/orzone.png"
+  },
+  {
+    "name": "GearupLK",
+    "tier": "previous",
+    "logo": "/sponsors/gearup.png"
+  },
+  {
+    "name": "Avier Travels",
+    "tier": "previous",
+    "logo": "/sponsors/avier-travels.png"
+  },
+  {
+    "name": "Chanilta Tea Factory",
+    "tier": "previous",
+    "logo": "/sponsors/chanilta-tea.png"
+  },
+  {
+    "name": "Informatics Institute of Technology",
+    "tier": "previous",
+    "logo": "/sponsors/iit.png"
+  },
+  {
+    "name": "Premium Oil Store",
+    "tier": "previous",
+    "logo": "/sponsors/premium-oil-store.png"
+  },
+  {
+    "name": "Fonterra",
+    "tier": "previous",
+    "logo": "/sponsors/fonterra.png"
+  },
+  {
+    "name": "Piyal Motors",
+    "tier": "previous",
+    "logo": "/sponsors/piyal-motors.png"
+  },
+  {
+    "name": "Stanced.Co",
+    "tier": "media",
+    "logo": "/sponsors/stanced.png"
+  },
+  {
+    "name": "Lashen's Work",
+    "tier": "media",
+    "logo": "/sponsors/lashens-work.png"
+  },
+  {
+    "name": "Sri Lankan Car Culture",
+    "tier": "media",
+    "logo": "/sponsors/sri-lankan-car-culture.png"
+  },
+  {
+    "name": "Lochana W.",
+    "tier": "media",
+    "logo": "/sponsors/lochana-w.png"
+  },
+  {
+    "name": "Th7Rock",
+    "tier": "media",
+    "logo": "/sponsors/the-rock.png"
+  },
+  {
+    "name": "Munokrome",
+    "tier": "media",
+    "logo": "/sponsors/munokrome.png"
+  },
+  {
+    "name": "Ray J",
+    "tier": "media",
+    "logo": "/sponsors/ray-jr-international.png"
+  }
 ]

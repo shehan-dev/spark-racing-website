@@ -1,7 +1,8 @@
 export const site = {
   name: "Spark Racing",
   tagline: "Endurance Karting Team",
-  email: "shehansilva2013@gmail.com",
+  // Team inbox, used by the main "Email our team" buttons
+  email: "sparkracingsl@gmail.com",
   social: {
     handle: "@spark.racing.sl",
     instagram: "https://www.instagram.com/spark.racing.sl/",

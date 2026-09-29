@@ -20,12 +20,15 @@ export default function MainSponsors() {
         >
           <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
             <span className="h-px w-8 bg-accent" aria-hidden />
-            Powered by
+            Main Sponsors · Previous Rounds
             <span className="h-px w-8 bg-accent" aria-hidden />
           </p>
           <h2 id="main-sponsors" className="font-display mt-4 text-3xl italic sm:text-4xl">
-            Our Main Sponsors
+            The brands behind <span className="text-accent">our podiums</span>
           </h2>
+          <p className="mt-4 max-w-xl text-muted">
+            Our main sponsors from previous rounds, who backed Spark Racing all the way to the 2025 championship.
+          </p>
         </motion.div>
 
         <motion.ul

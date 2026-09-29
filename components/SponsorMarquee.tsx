@@ -43,9 +43,10 @@ function Row({ items, reverse = false, duration }: { items: Sponsor[]; reverse?:
 
 export default function SponsorMarquee() {
   return (
-    <section aria-label="Sponsors and media partners" className="relative border-y border-line bg-bg-2 py-10">
-      <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">Our Sponsors</p>
-      <Row items={byTier("sponsor")} duration={45} />
+    <section aria-label="Previous round sponsors and media partners" className="relative border-y border-line bg-bg-2 py-10">
+      <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">Previous Round Sponsors</p>
+      <p className="mb-5 mt-2 text-center text-sm text-muted/70">Thank you to the brands who backed us in earlier rounds.</p>
+      <Row items={byTier("previous")} duration={45} />
       <p className="mb-4 mt-8 text-center text-xs font-semibold uppercase tracking-[0.3em] text-muted">
         Media Partners
       </p>
