@@ -1,7 +1,7 @@
 import sponsors from "@/data/sponsors.json";
 
 export type Sponsor = (typeof sponsors)[number];
-export type Tier = "main" | "sponsor" | "media";
+export type Tier = "main" | "previous" | "media";
 
 export const byTier = (tier: Tier) => sponsors.filter((s) => s.tier === tier);
 
