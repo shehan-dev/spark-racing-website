@@ -111,6 +111,31 @@ export default function Packages() {
           ))}
         </motion.div>
 
+        {/* Team Apparel — teaser for the section below */}
+        <motion.a
+          href="#apparel"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewport}
+          transition={{ duration: 0.6, ease }}
+          whileHover={{ y: -6 }}
+          className="group relative mt-4 flex flex-col gap-6 overflow-hidden border border-dashed border-accent/60 bg-surface p-7 transition-[border-color,box-shadow] duration-300 hover:border-solid hover:border-accent hover:shadow-[0_0_40px_rgba(255,106,0,0.25)] sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted">Product or hybrid</p>
+            <h3 className="font-display mt-3 text-3xl italic">Team Apparel Partner</h3>
+            <p className="mt-2 text-sm leading-relaxed text-ink/85">
+              Supply our official team jerseys and get your brand on every driver, crew member and supporter.
+            </p>
+          </div>
+          <span className="flex shrink-0 items-center gap-2 border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-black">
+            See below
+            <svg viewBox="0 0 16 16" className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden>
+              <path d="M8 2v12M3 9l5 5 5-5" />
+            </svg>
+          </span>
+        </motion.a>
+
         {/* Where the investment goes */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
