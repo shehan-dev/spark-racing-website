@@ -7,6 +7,7 @@ import SponsorMarquee from "@/components/SponsorMarquee";
 import Achievements from "@/components/Achievements";
 import CTABand from "@/components/CTABand";
 import Packages from "@/components/Packages";
+import Apparel from "@/components/Apparel";
 import Gallery from "@/components/Gallery";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
@@ -35,6 +36,7 @@ export default function Home() {
         <SWS />
         <Audience />
         <Packages />
+        <Apparel />
         <CTABand
           title="Need a custom package?"
           text="Every tier can be tailored — extra activations, product giveaways, lead-gen and more."
