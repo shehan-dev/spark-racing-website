@@ -141,7 +141,7 @@ export default function Team() {
             </span>
             <p className="font-display mt-6 text-2xl italic">Your brand here</p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-              Platinum partners race under their own name: <span className="text-ink">[Your Brand] × Spark Racing</span>.
+              Join <span className="text-ink">Access Motors Spark Racing</span> as a Gold, Silver, Bronze or Support partner.
             </p>
             <span className="mt-6 text-xs font-bold uppercase tracking-widest text-accent">Claim the seat →</span>
           </motion.a>

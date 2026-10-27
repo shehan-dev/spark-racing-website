@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-line">
         <p className="mx-auto max-w-7xl px-4 py-6 text-xs text-muted sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} Spark Racing. {site.social.handle}
+          © {new Date().getFullYear()} {site.teamName}. {site.social.handle}
         </p>
       </div>
     </footer>
