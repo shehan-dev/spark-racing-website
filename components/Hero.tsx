@@ -93,6 +93,16 @@ export default function Hero() {
         </motion.p>
 
         <h1 className="font-display max-w-5xl text-[15vw] leading-[0.88] sm:text-7xl lg:text-8xl xl:text-[8.5rem]">
+          <span className="block overflow-hidden pb-3">
+            <motion.span
+              className="block text-[7vw] italic tracking-wide text-ink/90 sm:text-4xl lg:text-5xl"
+              initial={{ x: "-110%", skewX: -24, filter: "blur(12px)" }}
+              animate={{ x: "0%", skewX: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.6, ease, delay: 0.25 }}
+            >
+              Access Motors
+            </motion.span>
+          </span>
           {["Spark", "Racing"].map((word, i) => (
             <span key={word} className="block overflow-hidden pr-4">
               <motion.span

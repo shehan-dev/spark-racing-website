@@ -6,7 +6,9 @@ import media from "@/data/media.json";
 import SectionHeading from "./SectionHeading";
 import { ease, fadeUp, stagger, viewport } from "@/lib/motion";
 import { lkr } from "@/lib/format";
+import { site } from "@/lib/site";
 
+const { titlePartner } = site;
 const budgetTotal = media.budget.reduce((s, b) => s + b.amount, 0);
 
 function Check() {
@@ -33,7 +35,7 @@ export default function Packages() {
           intro="Customisable tiers built to maximise your brand's visibility. Every package can be tailored to your marketing objectives."
         />
 
-        {/* Platinum — exclusive, full width */}
+        {/* Platinum — exclusive, full width, secured by the title partner */}
         <motion.article
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,20 +48,17 @@ export default function Packages() {
           <div className="relative grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
             <div>
               <p className="inline-block -skew-x-12 bg-accent px-3 py-1 text-xs font-bold uppercase tracking-widest text-black">
-                <span className="inline-block skew-x-12">{platinum.tag}</span>
+                <span className="inline-block skew-x-12">Already taken</span>
               </p>
               <h3 className="font-display mt-5 text-5xl italic sm:text-6xl">{platinum.tier}</h3>
-              <p className="mt-4 flex items-baseline gap-2">
-                <span className="text-sm font-semibold text-muted">LKR</span>
-                <span className="font-display text-5xl text-accent sm:text-6xl">{lkr(platinum.price)}</span>
-              </p>
-              <a
-                href="#contact"
-                data-tier={platinum.tier}
-                className="btn-throttle mt-8 inline-block -skew-x-12 bg-accent px-8 py-4 font-bold uppercase tracking-wider text-black"
-              >
-                <span className="inline-block skew-x-12">Become Title Sponsor</span>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-muted">Title sponsor</p>
+              <a href="#title-partner" className="mt-3 inline-block" aria-label={`${titlePartner.name} — title partner`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={titlePartner.logo} alt={titlePartner.name} className="h-16 w-auto max-w-full object-contain sm:h-20" />
               </a>
+              <p className="mt-4 text-sm text-muted">
+                We now race as <span className="font-semibold text-ink">{site.teamName}</span>.
+              </p>
             </div>
             <ul className="grid gap-3 sm:grid-cols-2">
               {platinum.benefits.map((b) => (
@@ -93,6 +92,19 @@ export default function Packages() {
                 <span className="text-xs font-semibold text-muted">LKR</span>
                 <span className="font-display text-3xl text-accent">{lkr(p.price)}</span>
               </p>
+              {p.sponsors && (
+                <div className="mt-6">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-muted">{p.tier} sponsors</p>
+                  <ul className="mt-3 grid grid-cols-2 gap-2">
+                    {p.sponsors.map((s) => (
+                      <li key={s.name} className="flex h-20 items-center justify-center border border-white/10 bg-black/30 p-3">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={s.logo} alt={s.name} loading="lazy" className="max-h-full w-auto max-w-full object-contain" />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <ul className="mt-6 flex-1 space-y-3 border-t border-line pt-6">
                 {p.benefits.map((b) => (
                   <li key={b} className="flex gap-2.5 text-sm leading-relaxed text-ink/85">

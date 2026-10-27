@@ -11,6 +11,10 @@
   },
   {
     "tier": "Gold", "tag": "High visibility", "price": 450000,
+    "sponsors": [
+      { "name": "Technomedics", "logo": "/sponsors/technomedics.png" },
+      { "name": "Nidheshraj Property Development", "logo": "/sponsors/nidheshraj-property.png" }
+    ],
     "benefits": [
       "Logo on race suits, helmets & team uniforms",
       "Branding on team transport & promotional material",

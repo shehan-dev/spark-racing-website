@@ -1,6 +1,16 @@
 export const site = {
   name: "Spark Racing",
+  teamName: "Access Motors Spark Racing",
   tagline: "Endurance Karting Team",
+  // Platinum title partner — shown at the top of the page and on the Platinum package
+  titlePartner: {
+    name: "Access Motors",
+    logo: "/sponsors/access-motors.png",
+    group: [
+      { name: "Access Motors", logo: "/sponsors/access-motors.png" },
+      { name: "Bodyshop by Access", logo: "/sponsors/bodyshop-by-access.png" },
+    ],
+  },
   // Team inbox, used by the main "Email our team" buttons
   email: "sparkracingsl@gmail.com",
   social: {

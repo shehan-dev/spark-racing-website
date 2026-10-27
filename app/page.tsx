@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import ScrollProgress from "@/components/ScrollProgress";
 import CursorTrail from "@/components/CursorTrail";
 import Hero from "@/components/Hero";
+import TitlePartner from "@/components/TitlePartner";
 import MainSponsors from "@/components/MainSponsors";
 import SponsorMarquee from "@/components/SponsorMarquee";
 import Achievements from "@/components/Achievements";
@@ -24,6 +25,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <TitlePartner />
         <MainSponsors />
         <SponsorMarquee />
         <About />
